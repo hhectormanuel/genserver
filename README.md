@@ -23,7 +23,7 @@ childs [
   %{start: {Stack, :start_link, [[]]}, id: Stack}
 ]
 Supervisor.start_link(childs, strategy: :one_for_one)
-
+```
 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
