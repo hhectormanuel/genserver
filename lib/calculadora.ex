@@ -2,7 +2,7 @@ defmodule Calculadora do
   use GenServer
 
 
-  def start_link(), do: GenServer.start_link(__MODULE__, [], name: __MODULE__)
+  def start_link(_state), do: GenServer.start_link(__MODULE__, [], name: __MODULE__)
 
   def add(num1, num2), do: GenServer.call(__MODULE__, {:+, num1, num2})
 

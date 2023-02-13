@@ -2,7 +2,7 @@ defmodule Stack do
   use GenServer
 
 
-  def start_link(), do: GenServer.start_link(Stack, [], name: __MODULE__)
+  def start_link(_state), do: GenServer.start_link(Stack, [], name: __MODULE__)
 
   def push(value), do: GenServer.call(__MODULE__, {:push, value})
   def pop(), do: GenServer.call(__MODULE__, {:pop})
